@@ -1,0 +1,53 @@
+<div class="box">
+    <div class="header">
+        Employee Form
+    </div>
+    <form class="form-container" [formGroup]="myform">
+        <div class="form-entity">
+            <mat-form-field appearance="outline">
+                <mat-label>Employee Name</mat-label>
+                <input matInput placeholder="Full Name" formControlName="employeeName">
+            </mat-form-field>
+        </div>
+
+        <div class="form-entity">
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Your email-id" formControlName="employeeMail">
+            </mat-form-field>
+        </div>
+
+
+        <div class="form-entity">
+            <mat-form-field appearance="outline">
+                <mat-label>Phone no:</mat-label>
+                <input matInput placeholder="Phone Number" formControlName="employeeContact">
+            </mat-form-field>
+        </div>
+
+        <div class="form-entity">
+            <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Your Address" formControlName="employeeAddress">
+            </mat-form-field>
+        </div>
+
+        <div class="form-entity">
+            <mat-form-field appearance="fill">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="employeeDOB">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+
+        <div class="form-entity" formControlName="agree">
+            <mat-checkbox>I agree with terms and conditions</mat-checkbox>
+        </div>
+
+        <div class="button">
+            <button mat-raised-button color="primary">Submit</button>
+        </div>
+
+    </form>
+</div>
